@@ -83,14 +83,14 @@ export const employees: Resource[] = [{
   text: 'John Heart',
   id: 1,
   color: '#56ca85',
-  avatar: 'public/coach-man.png',
+  avatar: '/coach-man.png',
   age: 27,
   discipline: 'ABS, Fitball, StepFit',
 }, {
   text: 'Sandra Johnson',
   id: 2,
   color: '#ff9747',
-  avatar: 'public/coach-woman.png',
+  avatar: '/coach-woman.png',
   age: 25,
   discipline: 'ABS, Fitball, StepFit',
 }];
