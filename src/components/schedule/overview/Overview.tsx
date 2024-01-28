@@ -27,8 +27,7 @@ export default function Overview() {
       <Title size={"40px"} pb={"10px"}>
         Overview
       </Title>
-      <Text pb={"xs"}>
-          <p>
+          <Text pb={"xs"}>
             DevExtreme React Scheduler is a UI component for scheduling. It
             implements all the features necessary for its purpose: flexible data
             binding, easy appointment editing, multiple calendar views, time
@@ -40,8 +39,8 @@ export default function Overview() {
               Learn more about DevExtreme React components
             </a>
             .
-          </p>
-          <p>
+          </Text>
+          <Text pb={"xs"}>
             To get started with the DevExtreme Scheduler component, refer to the
             following tutorial for step-by-step instructions:{" "}
             <a style={{ color: "#09b5e1", textDecoration: "underline"}} 
@@ -51,8 +50,7 @@ export default function Overview() {
               Getting Started with Scheduler
             </a>
             .
-          </p>
-      </Text>
+          </Text>
       <Scheduler
         timeZone="America/Los_Angeles"
         dataSource={data}
