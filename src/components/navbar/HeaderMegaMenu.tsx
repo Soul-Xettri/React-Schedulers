@@ -31,7 +31,7 @@ const dataBinding = [
   },
   {
     title: "SignalR Service",
-    link: "data-binding/signalR-service",
+    link: "data-binding/signalr-service",
   },
   {
     title: "Google Calendar Integration",

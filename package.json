@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aspnet/signalr": "^1.0.27",
     "@mantine/core": "^7.5.1",
     "@mantine/hooks": "^7.5.1",
     "@mantine/modals": "^7.5.1",
