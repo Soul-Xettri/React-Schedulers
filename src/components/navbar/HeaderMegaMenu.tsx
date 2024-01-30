@@ -23,107 +23,107 @@ import { Link, NavLink } from "react-router-dom";
 const dataBinding = [
   {
     title: "Simple Array",
-    link: "simple-array",
+    link: "data-binding/simple-array",
   },
   {
     title: "Web Api Service",
-    link: "web-api-service",
+    link: "data-binding/web-api-service",
   },
   {
     title: "SignalR Service",
-    link: "signalR-service",
+    link: "data-binding/signalR-service",
   },
   {
     title: "Google Calendar Integration",
-    link: "google-calendar-integration",
+    link: "data-binding/google-calendar-integration",
   },
 ];
 
 const views = [
   {
     title: "Basic Views",
-    link: "basic-views",
+    link: "views/basic-views",
   },
   {
     title: "Timelines",
-    link: "timelines",
+    link: "views/timelines",
   },
   {
     title: "Agenda",
-    link: "agenda",
+    link: "views/agenda",
   },
 ];
 
 const features = [
   {
     title: "Current Time Indicator",
-    link: "current-time-indicator",
+    link: "features/current-time-indicator",
   },
   {
     title: "Time Zone Support",
-    link: "time-zone-support",
+    link: "features/time-zone-support",
   },
   {
     title: "Recurring Appointments",
-    link: "recurring-appointments",
+    link: "features/recurring-appointments",
   },
   {
     title: "Editing",
-    link: "editing",
+    link: "features/editing",
   },
   {
     title: "Custom Drag & Drop",
-    link: "custom-drag-drop",
+    link: "features/custom-drag-drop",
   },
   {
     title: "Resources",
-    link: "resources",
+    link: "features/resources",
   },
   {
     title: "All Day Panel Mode",
-    link: "all-day-panel-mode",
+    link: "features/all-day-panel-mode",
   },
   {
     title: "Work Shifts",
-    link: "work-shifts",
+    link: "features/work-shifts",
   },
 ];
 
 const grouping = [
   {
     title: "Group Orientation",
-    link: "group-orientation",
+    link: "grouping/group-orientation",
   },
   {
     title: "Grouping By Date",
-    link: "grouping-by-date",
+    link: "grouping/grouping-by-date",
   },
 ];
 
 const customization = [
   {
     title: "Custom Templates",
-    link: "custom-templates",
+    link: "customization/custom-templates",
   },
   {
     title: "Disabled Date/Time Ranges",
-    link: "disabled-date-time-ranges",
+    link: "customization/disabled-date-time-ranges",
   },
   {
     title: "Customize Individual Views",
-    link: "customize-individual-views",
+    link: "customization/customize-individual-views",
   },
   {
     title: "Increased View Duration",
-    link: "increased-view-duration",
+    link: "customization/increased-view-duration",
   },
   {
     title: "Limit the Appointment Count per Cell",
-    link: "limit-the-appointment-count-per-cell",
+    link: "customization/limit-the-appointment-count-per-cell",
   },
   {
     title: "Context Menu Integration",
-    link: "context-menu-integration",
+    link: "customization/context-menu-integration",
   },
 ];
 
@@ -133,10 +133,19 @@ export function HeaderMegaMenu() {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
-  const dataBindinglinks = dataBinding.map((item) => (
+  const dataBindingLinks = dataBinding.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <NavLink to={item.link}>
+        <NavLink
+          to={item.link}
+         style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+        >
           <Text size="sm" fw={500}>
             {item.title}
           </Text>
@@ -147,7 +156,16 @@ export function HeaderMegaMenu() {
   const viewsLinks = views.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <NavLink to={item.link}>
+        <NavLink
+          to={item.link}
+         style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+        >
           {" "}
           <Text size="sm" fw={500}>
             {item.title}
@@ -159,7 +177,16 @@ export function HeaderMegaMenu() {
   const featuresLink = features.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <NavLink to={item.link}>
+        <NavLink
+          to={item.link}
+         style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+        >
           {" "}
           <Text size="sm" fw={500}>
             {item.title}
@@ -171,7 +198,16 @@ export function HeaderMegaMenu() {
   const groupingLinks = grouping.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <NavLink to={item.link}>
+        <NavLink
+          to={item.link}
+         style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+        >
           {" "}
           <Text size="sm" fw={500}>
             {item.title}
@@ -183,7 +219,16 @@ export function HeaderMegaMenu() {
   const customizationLink = customization.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
-        <NavLink to={item.link}>
+        <NavLink
+          to={item.link}
+         style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+        >
           {" "}
           <Text size="sm" fw={500}>
             {item.title}
@@ -208,7 +253,17 @@ export function HeaderMegaMenu() {
       <header className={header ? classes.fixedHeader : classes.header}>
         <Group justify="center" h="100%">
           <Group h="100%" gap={0} visibleFrom="sm">
-            <NavLink to="/" className={classes.link}>
+            <NavLink
+              to="/"
+              className={classes.link}
+              style={({ isActive, isTransitioning }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  background: isActive ? "#f5f5f5" : "",
+                  viewTransitionName: isTransitioning ? "slide" : "",
+                };
+              }}
+            >
               Overview
             </NavLink>
             <HoverCard position="bottom" radius="md" shadow="md" withinPortal>
@@ -227,12 +282,12 @@ export function HeaderMegaMenu() {
               </HoverCard.Target>
 
               <HoverCard.Dropdown style={{ overflow: "hidden" }}>
-                <SimpleGrid spacing={0}>{dataBindinglinks}</SimpleGrid>
+                <SimpleGrid spacing={0}>{dataBindingLinks}</SimpleGrid>
               </HoverCard.Dropdown>
             </HoverCard>
             <HoverCard position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <NavLink to="#" className={classes.link}>
+                <NavLink to="#" className={classes.link} >
                   <Center inline>
                     <Box component="span" mr={5}>
                       Views
@@ -348,7 +403,7 @@ export function HeaderMegaMenu() {
               />
             </Center>
           </UnstyledButton>
-          <Collapse in={linksOpened}>{dataBindinglinks}</Collapse>
+          <Collapse in={linksOpened}>{dataBindingLinks}</Collapse>
           <NavLink to="#" className={classes.link}>
             Learn
           </NavLink>

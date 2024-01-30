@@ -14,7 +14,7 @@ const App = () => (
       <Routes>
         <Route path="/">
           <Route index element={<Overview />} />
-          <Route path="simple-array" element={<SimpleArray />} />
+          <Route path="data-binding/simple-array" element={<SimpleArray />} />
           <Route path="*" element={<NotFoundTitle/>}/>
         </Route>
       </Routes>
