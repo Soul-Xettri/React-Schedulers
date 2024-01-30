@@ -6,16 +6,21 @@ import SimpleArray from "./components/schedule/dataBinding/simpleArray/SimpleArr
 import { MantineProvider } from "@mantine/core";
 import { HeaderMegaMenu } from "./components/navbar/HeaderMegaMenu";
 import { NotFoundTitle } from "./pages/errorPages/NotFoundTitle";
+import WebAPIService from "./components/schedule/dataBinding/webApiService/WebApiService";
 
 const App = () => (
   <MantineProvider>
     <Router>
-        <HeaderMegaMenu/>
+      <HeaderMegaMenu />
       <Routes>
         <Route path="/">
           <Route index element={<Overview />} />
           <Route path="data-binding/simple-array" element={<SimpleArray />} />
-          <Route path="*" element={<NotFoundTitle/>}/>
+          <Route
+            path="data-binding/web-api-service"
+            element={<WebAPIService />}
+          />
+          <Route path="*" element={<NotFoundTitle />} />
         </Route>
       </Routes>
     </Router>
