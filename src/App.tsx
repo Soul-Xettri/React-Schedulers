@@ -10,6 +10,7 @@ import WebAPIService from "./components/schedule/dataBinding/webApiService/WebAp
 import SignalRService from "./components/schedule/dataBinding/signalRService/SignalRService";
 import GoogleCalendarIntegration from "./components/schedule/dataBinding/googleCalendarIntegration/GoogleCalendarIntegration";
 import BasicViews from "./components/schedule/views/basicViews/BasicViews";
+import TimeLines from "./components/schedule/views/timelines/Timelines";
 
 const App = () => (
   <MantineProvider>
@@ -34,6 +35,10 @@ const App = () => (
           <Route
             path="views/basic-views"
             element={<BasicViews />}
+          />
+           <Route
+            path="views/timelines"
+            element={<TimeLines />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
