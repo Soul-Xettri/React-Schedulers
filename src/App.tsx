@@ -8,6 +8,7 @@ import { HeaderMegaMenu } from "./components/navbar/HeaderMegaMenu";
 import { NotFoundTitle } from "./pages/errorPages/NotFoundTitle";
 import WebAPIService from "./components/schedule/dataBinding/webApiService/WebApiService";
 import SignalRService from "./components/schedule/dataBinding/signalRService/SignalRService";
+import GoogleCalendarIntegration from "./components/schedule/dataBinding/googleCalendarIntegration/GoogleCalendarIntegration";
 
 const App = () => (
   <MantineProvider>
@@ -24,6 +25,10 @@ const App = () => (
            <Route
             path="data-binding/signalr-service"
             element={<SignalRService />}
+          />
+          <Route
+            path="data-binding/google-calendar-integration"
+            element={<GoogleCalendarIntegration />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
