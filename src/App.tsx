@@ -7,6 +7,7 @@ import { MantineProvider } from "@mantine/core";
 import { HeaderMegaMenu } from "./components/navbar/HeaderMegaMenu";
 import { NotFoundTitle } from "./pages/errorPages/NotFoundTitle";
 import WebAPIService from "./components/schedule/dataBinding/webApiService/WebApiService";
+import SignalRService from "./components/schedule/dataBinding/signalR Service/SignalRService";
 
 const App = () => (
   <MantineProvider>
@@ -19,6 +20,10 @@ const App = () => (
           <Route
             path="data-binding/web-api-service"
             element={<WebAPIService />}
+          />
+           <Route
+            path="data-binding/signalr-service"
+            element={<SignalRService />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
