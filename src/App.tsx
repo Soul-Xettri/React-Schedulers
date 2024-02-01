@@ -7,7 +7,7 @@ import { MantineProvider } from "@mantine/core";
 import { HeaderMegaMenu } from "./components/navbar/HeaderMegaMenu";
 import { NotFoundTitle } from "./pages/errorPages/NotFoundTitle";
 import WebAPIService from "./components/schedule/dataBinding/webApiService/WebApiService";
-import SignalRService from "./components/schedule/dataBinding/signalR Service/SignalRService";
+import SignalRService from "./components/schedule/dataBinding/signalRService/SignalRService";
 
 const App = () => (
   <MantineProvider>
