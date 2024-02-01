@@ -37,7 +37,7 @@ const GoogleCalendarIntegration = () => (
   <React.Fragment>
     <div className="pr-10 pl-10">
       <Title size={"40px"} pb={"10px"}>
-        SignalR Service
+        Google Calendar Integration
       </Title>
       <Text pb={"xs"}>
         To display appointments from Google Calendar in the Scheduler, follow
