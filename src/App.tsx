@@ -10,7 +10,7 @@ import WebAPIService from "./components/schedule/dataBinding/webApiService/WebAp
 import SignalRService from "./components/schedule/dataBinding/signalRService/SignalRService";
 import GoogleCalendarIntegration from "./components/schedule/dataBinding/googleCalendarIntegration/GoogleCalendarIntegration";
 import BasicViews from "./components/schedule/views/basicViews/BasicViews";
-import TimeLines from "./components/schedule/views/timelines/Timelines";
+import { TimeLines } from "./components/schedule/views/timelines/TimeLines";
 
 const App = () => (
   <MantineProvider>
