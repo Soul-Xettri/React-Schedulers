@@ -13,6 +13,7 @@ import BasicViews from "./components/schedule/views/basicViews/BasicViews";
 import TimeLines  from "./components/schedule/views/timelines/TimeLines";
 import Agenda from "./components/schedule/views/agenda/Agenda";
 import CurrentTimeIndicator from "./components/schedule/features/currentTimeIndicator/CurrentTimeIndicator";
+import TimeZoneSupport from "./components/schedule/features/timeZoneSupport/TimeZoneSupport";
 
 const App = () => (
   <MantineProvider>
@@ -49,6 +50,10 @@ const App = () => (
           <Route
             path="features/current-time-indicator"
             element={<CurrentTimeIndicator />}
+          />
+          <Route
+            path="features/time-zone-support"
+            element={<TimeZoneSupport />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
