@@ -12,6 +12,7 @@ import GoogleCalendarIntegration from "./components/schedule/dataBinding/googleC
 import BasicViews from "./components/schedule/views/basicViews/BasicViews";
 import TimeLines  from "./components/schedule/views/timelines/TimeLines";
 import Agenda from "./components/schedule/views/agenda/Agenda";
+import CurrentTimeIndicator from "./components/schedule/features/currentTimeIndicator/CurrentTimeIndicator";
 
 const App = () => (
   <MantineProvider>
@@ -44,6 +45,10 @@ const App = () => (
            <Route
             path="views/agenda"
             element={<Agenda />}
+          />
+          <Route
+            path="features/current-time-indicator"
+            element={<CurrentTimeIndicator />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
