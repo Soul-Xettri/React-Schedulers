@@ -14,6 +14,7 @@ import TimeLines  from "./components/schedule/views/timelines/TimeLines";
 import Agenda from "./components/schedule/views/agenda/Agenda";
 import CurrentTimeIndicator from "./components/schedule/features/currentTimeIndicator/CurrentTimeIndicator";
 import TimeZoneSupport from "./components/schedule/features/timeZoneSupport/TimeZoneSupport";
+import WorkShifts from "./components/schedule/features/WorkShifts/WorkShifts";
 
 const App = () => (
   <MantineProvider>
@@ -54,6 +55,10 @@ const App = () => (
           <Route
             path="features/time-zone-support"
             element={<TimeZoneSupport />}
+          />
+             <Route
+            path="features/work-shifts"
+            element={<WorkShifts />}
           />
           <Route path="*" element={<NotFoundTitle />} />
         </Route>
